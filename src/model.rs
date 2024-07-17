@@ -155,6 +155,7 @@ pub struct JsonOutput {
 
 #[derive(Clone, Serialize, Deserialize, Debug, Default)]
 pub struct Playlist {
+    pub channel_follower_count: Option<i64>,
     #[serde(default, deserialize_with = "parse_entries")]
     pub entries: Option<Vec<SingleVideo>>,
     pub extractor: Option<String>,
